@@ -1,0 +1,33 @@
+{
+  "name": "local-chara",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": { "zh": "角色卡", "en": "Cards" },
+    "icon": "book",
+    "contributes": {
+      "composer.actions": [
+        { "id": "opencards", "label": { "zh": "角色卡", "en": "Cards" }, "icon": "book" }
+      ],
+      "panels": [
+        {
+          "id": "cards",
+          "title": { "zh": "角色卡", "en": "Cards" },
+          "icon": "book",
+          "placement": ["chat.panel", "features", "session.tab"]
+        }
+      ]
+    }
+  }
+}
